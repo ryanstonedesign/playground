@@ -6,38 +6,38 @@
 }
 
 :root {
-  --primary:        #E269C6;
-  --secondary:      #6DE250;
-  --tertiary:       #3EEAB6;
-  --surface:        #F8F7F8;
-  --surface-muted:  #EAE6E9;
-  --border:         #D8D0D6;
-  --ink-strong:     #2B1C28;
-  --ink-mute:       #734E6B;
+  --primary:        #C64E56;
+  --secondary:      #D5AA7C;
+  --tertiary:       #D64CA8;
+  --surface:        #5A494B;
+  --surface-muted:  #3E3233;
+  --border:         #272021;
+  --ink-strong:     #EDE8E8;
+  --ink-mute:       #B09B9C;
 
-  --radius-button:  4px;
-  --radius-card:    6px;
+  --radius-button:  8px;
+  --radius-card:    22px;
 
-  --font: 'Silkscreen', monospace;
+  --font: 'Geist', system-ui, -apple-system, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Orb page background */
+/* Dark orb page background */
 body {
   font-family: var(--font);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   color: var(--ink-strong);
-  background-color: #f8c8dc;
+  background-color: #1d070b;
   background-image:
-    radial-gradient(ellipse 640px 540px at 12% 18%, rgba(255,128,192,0.62) 0%, transparent 70%),
-    radial-gradient(ellipse 540px 640px at 84%  8%, rgba(167,139,250,0.56) 0%, transparent 70%),
-    radial-gradient(ellipse 460px 440px at 74% 84%, rgba(128,232,255,0.56) 0%, transparent 70%),
-    radial-gradient(ellipse 500px 400px at 18% 90%, rgba(255,209,128,0.50) 0%, transparent 70%);
+    radial-gradient(ellipse 640px 540px at 12% 18%, rgba(90,20,32,0.72)  0%, transparent 70%),
+    radial-gradient(ellipse 540px 640px at 84%  8%, rgba(50,16,24,0.66)  0%, transparent 70%),
+    radial-gradient(ellipse 460px 440px at 74% 84%, rgba(122,36,48,0.66) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 400px at 18% 90%, rgba(36,16,20,0.62)  0%, transparent 70%);
 }
 
 /* Quiet vignette */
@@ -45,14 +45,14 @@ body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 52%, rgba(43,28,40,0.20) 100%);
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.48) 100%);
   pointer-events: none;
   z-index: 9999;
 }
 
 /* ===== Hero ===== */
 .hero {
-  background: linear-gradient(135deg, #2B1C28 0%, #8B3A7A 55%, #E269C6 100%);
+  background: linear-gradient(135deg, #0d0204 0%, #4a1020 55%, #C64E56 100%);
   min-height: calc(100vh - 300px);
   display: flex;
   align-items: center;
@@ -82,45 +82,42 @@ body::after {
 
 .hero h1 {
   font-family: var(--font);
-  font-size: clamp(2rem, 7vw, 48px);
+  font-size: clamp(2.5rem, 7vw, 48px);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.01em;
   color: #ffffff;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
 
 .tagline {
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  color: rgba(255,255,255,0.84);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.80);
   margin-bottom: 2.5rem;
 }
 
-/* button-primary: arcade-block shadow */
+/* button-primary */
 .cta-button {
   display: inline-block;
-  background: #E269C6;
+  background: linear-gradient(180deg, #C64E56 0%, #C95F5D 100%);
   color: #ffffff;
   font-family: var(--font);
   font-weight: 700;
   font-size: 1rem;
-  padding: 0.85rem 2.2rem;
+  padding: 0.9rem 2.4rem;
   border-radius: var(--radius-button);
   text-decoration: none;
   border: none;
-  box-shadow: 4px 4px 0 #662F59;
-  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 0 0 2px #C64E56, 0 6px 14px #C64E5622;
+  transition: transform 0.18s, filter 0.18s, box-shadow 0.18s;
 }
 
 .cta-button:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 5px 5px 0 #662F59;
-}
-
-.cta-button:active {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #662F59;
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 0 0 2px #C64E56, 0 10px 22px #C64E5633;
 }
 
 /* ===== Nav ===== */
@@ -128,9 +125,10 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--ink-strong);
-  border-bottom: 2px solid var(--primary);
-  box-shadow: 0 2px 0 #662F59;
+  background: rgba(18,5,8,0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
 }
 
 nav ul {
@@ -144,13 +142,13 @@ nav ul {
 
 nav a {
   display: block;
-  color: rgba(255,255,255,0.78);
+  color: var(--ink-mute);
   text-decoration: none;
   font-family: var(--font);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   padding: 1rem 1.2rem;
-  transition: color 0.12s;
+  transition: color 0.15s;
 }
 
 nav a:hover {
@@ -165,7 +163,9 @@ nav a:hover {
 }
 
 .section-alt {
-  background: rgba(234, 230, 233, 0.58);
+  background: rgba(62,50,51,0.50);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   max-width: 100%;
   padding: 5rem 2rem;
 }
@@ -179,7 +179,7 @@ nav a:hover {
 .section h2,
 .section-alt h2 {
   font-family: var(--font);
-  font-size: clamp(1.4rem, 4vw, 32px);
+  font-size: clamp(1.8rem, 4vw, 32px);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.005em;
@@ -192,23 +192,66 @@ nav a:hover {
 .section-alt h2::after {
   content: '';
   display: block;
-  width: 48px;
-  height: 4px;
+  width: 56px;
+  height: 3px;
   background: var(--primary);
-  border-radius: 0;
+  border-radius: 2px;
   margin: 0.6rem auto 0;
 }
 
-/* ===== Pixel card surface ===== */
+/* ===== Glass card surface ===== */
 .card,
 .fact,
 .benefit,
 .breed-card {
-  background: rgba(255,245,251,1);
+  background: rgba(42,12,18,0.62);
   border-radius: var(--radius-card);
-  box-shadow: 0 0 0 4px #2B1C28, 8px 8px 0 #2B1C28;
+  backdrop-filter: blur(24px) saturate(1.45);
+  -webkit-backdrop-filter: blur(24px) saturate(1.45);
+  box-shadow:
+    0 1px 1px rgba(0,0,0,0.55),
+    0 24px 70px rgba(80,0,10,0.46),
+    0 50px 120px rgba(0,0,0,0.35);
   position: relative;
   overflow: hidden;
+}
+
+/* Gradient stroke */
+.card::before,
+.fact::before,
+.benefit::before,
+.breed-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(150deg,
+    color-mix(in srgb, #a84858 85%, transparent) 0%,
+    color-mix(in srgb, #a84858 25%, transparent) 30%,
+    transparent 55%,
+    color-mix(in srgb, #a84858 18%, transparent) 80%,
+    color-mix(in srgb, #a84858 55%, transparent) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* Noise overlay */
+.card::after,
+.fact::after,
+.benefit::after,
+.breed-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+  opacity: 0.08;
+  pointer-events: none;
 }
 
 /* ===== Why Cards ===== */
@@ -220,29 +263,29 @@ nav a:hover {
 
 .card {
   padding: 2rem 1.6rem;
-  transition: transform 0.12s;
+  transition: transform 0.18s;
   text-align: center;
 }
 
 .card:hover {
-  transform: translate(-2px, -2px);
+  transform: translateY(-3px);
 }
 
 .card-icon {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
 .card h3 {
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--ink-strong);
   margin-bottom: 0.6rem;
 }
 
 .card p {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: var(--ink-mute);
 }
 
@@ -264,7 +307,7 @@ nav a:hover {
 
 .fact-number {
   font-family: var(--font);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--tertiary);
   min-width: 2.5rem;
@@ -273,7 +316,7 @@ nav a:hover {
 }
 
 .fact p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--ink-mute);
 }
 
@@ -286,24 +329,23 @@ nav a:hover {
 
 .benefit {
   padding: 1.8rem 1.6rem;
-  border-top: 3px solid var(--secondary);
-  transition: transform 0.12s;
+  transition: transform 0.18s;
 }
 
 .benefit:hover {
-  transform: translate(-2px, -2px);
+  transform: translateY(-3px);
 }
 
 .benefit h3 {
   font-family: var(--font);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--ink-strong);
   margin-bottom: 0.6rem;
 }
 
 .benefit p {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--ink-mute);
 }
 
@@ -319,28 +361,28 @@ nav a:hover {
 .breed-card {
   padding: 2rem 1.6rem;
   text-align: center;
-  transition: transform 0.12s;
+  transition: transform 0.18s;
 }
 
 .breed-card:hover {
-  transform: translate(-2px, -2px);
+  transform: translateY(-3px);
 }
 
 .breed-emoji {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 0.8rem;
 }
 
 .breed-card h3 {
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--ink-strong);
   margin-bottom: 0.6rem;
 }
 
 .breed-card p {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--ink-mute);
   margin-bottom: 1rem;
 }
@@ -351,31 +393,32 @@ nav a:hover {
   background: transparent;
   color: var(--primary);
   font-family: var(--font);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 400;
-  padding: 0.2rem 0.65rem;
+  padding: 0.25rem 0.7rem;
   border-radius: var(--radius-button);
-  border: 3px solid #E269C6;
+  border: 1.5px solid #C64E56;
   margin: 0.15rem;
 }
 
 /* ===== Footer ===== */
 footer {
-  background: var(--ink-strong);
-  color: rgba(255,255,255,0.65);
+  background: rgba(13,2,4,0.95);
+  color: var(--ink-mute);
   text-align: center;
   padding: 2.5rem 2rem;
   font-family: var(--font);
+  border-top: 1px solid var(--border);
 }
 
 footer p {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .footer-sub {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   margin-top: 0.3rem;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 /* ===== Responsive ===== */
@@ -390,6 +433,6 @@ footer p {
 
   nav a {
     padding: 0.75rem 0.8rem;
-    font-size: 0.78rem;
+    font-size: 0.88rem;
   }
 }
