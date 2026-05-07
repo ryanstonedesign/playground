@@ -6,20 +6,30 @@
 }
 
 :root {
-  --primary:        #E269C6;
-  --secondary:      #6DE250;
-  --tertiary:       #3EEAB6;
-  --surface:        #F8F7F8;
-  --surface-muted:  #EAE6E9;
-  --border:         #D8D0D6;
-  --ink-strong:     #2B1C28;
-  --ink-mute:       #734E6B;
+  --primary:        #54BBB9;
+  --secondary:      #3FBFCA;
+  --tertiary:       #59C0AA;
+  --surface:        #F7F8F8;
+  --surface-muted:  #E7E9E9;
+  --border:         #D1D6D6;
+  --ink-strong:     #1D2A2A;
+  --ink-mute:       #517070;
 
-  --radius-button:  4px;
-  --radius-card:    6px;
-  --shadow:         0 4px 20px rgba(0,0,0,0.08);
+  --radius-button:  18px;
+  --radius-card:    24px;
+  --shadow:         0 4px 20px rgba(29,42,42,0.06);
 
-  --font: 'Silkscreen', monospace;
+  --font: 'Outfit', system-ui, -apple-system, sans-serif;
+
+  /* inset-soft button shape: soft outer shadow + subtle inner highlight */
+  --inset-soft:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    inset 0 -1px 0 rgba(0,0,0,0.06),
+    0 6px 16px rgba(29,42,42,0.10);
+  --inset-soft-hover:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 -1px 0 rgba(0,0,0,0.08),
+    0 10px 24px rgba(29,42,42,0.14);
 }
 
 html {
@@ -35,19 +45,9 @@ body {
   color: var(--ink-strong);
 }
 
-/* Quiet vignette */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(ellipse at center, transparent 55%, rgba(43,28,40,0.14) 100%);
-  pointer-events: none;
-  z-index: 9999;
-}
-
 /* ===== Hero ===== */
 .hero {
-  background: linear-gradient(135deg, #2B1C28 0%, #8B3078 55%, #E269C6 100%);
+  background: linear-gradient(135deg, #1D2A2A 0%, #2F7F87 50%, #54BBB9 100%);
   min-height: calc(100vh - 300px);
   display: flex;
   align-items: center;
@@ -62,7 +62,7 @@ body::after {
   content: '🐾';
   position: absolute;
   font-size: 30rem;
-  opacity: 0.05;
+  opacity: 0.06;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -77,22 +77,23 @@ body::after {
 
 .hero h1 {
   font-family: var(--font);
-  font-size: clamp(2rem, 7vw, 48px);
+  font-size: clamp(2.5rem, 7vw, 48px);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.01em;
   color: #ffffff;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  text-shadow: 0 2px 18px rgba(0,0,0,0.20);
 }
 
 .tagline {
-  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-  color: rgba(255,255,255,0.82);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
   margin-bottom: 2.5rem;
 }
 
-/* button-primary */
+/* button-primary, inset-soft */
 .cta-button {
   display: inline-block;
   background: var(--primary);
@@ -100,17 +101,18 @@ body::after {
   font-family: var(--font);
   font-weight: 700;
   font-size: 1rem;
-  padding: 0.85rem 2.2rem;
+  padding: 0.9rem 2.4rem;
   border-radius: var(--radius-button);
   text-decoration: none;
-  transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
-  box-shadow: 0 4px 18px rgba(226,105,198,0.4);
+  border: none;
+  transition: transform 0.18s, box-shadow 0.18s, filter 0.18s;
+  box-shadow: var(--inset-soft);
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  filter: brightness(1.08);
-  box-shadow: 0 8px 28px rgba(226,105,198,0.5);
+  filter: brightness(1.05);
+  box-shadow: var(--inset-soft-hover);
 }
 
 /* ===== Nav ===== */
@@ -119,8 +121,8 @@ nav {
   top: 0;
   z-index: 100;
   background: var(--ink-strong);
-  border-bottom: 2px solid var(--primary);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  border-bottom: 1px solid var(--primary);
+  box-shadow: 0 2px 12px rgba(29,42,42,0.12);
 }
 
 nav ul {
@@ -138,7 +140,7 @@ nav a {
   text-decoration: none;
   font-family: var(--font);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   padding: 1rem 1.2rem;
   transition: color 0.15s;
 }
@@ -169,7 +171,7 @@ nav a:hover {
 .section h2,
 .section-alt h2 {
   font-family: var(--font);
-  font-size: clamp(1.4rem, 4vw, 32px);
+  font-size: clamp(1.8rem, 4vw, 32px);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.005em;
@@ -182,7 +184,7 @@ nav a:hover {
 .section-alt h2::after {
   content: '';
   display: block;
-  width: 48px;
+  width: 56px;
   height: 3px;
   background: var(--primary);
   border-radius: 2px;
@@ -202,30 +204,30 @@ nav a:hover {
   border-radius: var(--radius-card);
   padding: 2rem 1.6rem;
   box-shadow: var(--shadow);
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: transform 0.18s, box-shadow 0.18s;
   text-align: center;
 }
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(226,105,198,0.15);
+  box-shadow: 0 10px 28px rgba(84,187,185,0.18);
 }
 
 .card-icon {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
 .card h3 {
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--ink-strong);
   margin-bottom: 0.6rem;
 }
 
 .card p {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: var(--ink-mute);
 }
 
@@ -251,7 +253,7 @@ nav a:hover {
 
 .fact-number {
   font-family: var(--font);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--tertiary);
   min-width: 2.5rem;
@@ -260,7 +262,7 @@ nav a:hover {
 }
 
 .fact p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--ink-mute);
 }
 
@@ -278,7 +280,7 @@ nav a:hover {
   padding: 1.8rem 1.6rem;
   box-shadow: var(--shadow);
   border-top: 3px solid var(--secondary);
-  transition: transform 0.15s;
+  transition: transform 0.18s;
 }
 
 .benefit:hover {
@@ -287,14 +289,14 @@ nav a:hover {
 
 .benefit h3 {
   font-family: var(--font);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--ink-strong);
   margin-bottom: 0.6rem;
 }
 
 .benefit p {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--ink-mute);
 }
 
@@ -314,29 +316,29 @@ nav a:hover {
   padding: 2rem 1.6rem;
   box-shadow: var(--shadow);
   text-align: center;
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: transform 0.18s, box-shadow 0.18s;
 }
 
 .breed-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(226,105,198,0.15);
+  box-shadow: 0 10px 28px rgba(84,187,185,0.18);
 }
 
 .breed-emoji {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 0.8rem;
 }
 
 .breed-card h3 {
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--ink-strong);
   margin-bottom: 0.6rem;
 }
 
 .breed-card p {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--ink-mute);
   margin-bottom: 1rem;
 }
@@ -346,9 +348,9 @@ nav a:hover {
   background: var(--surface-muted);
   color: var(--ink-mute);
   font-family: var(--font);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 400;
-  padding: 0.2rem 0.65rem;
+  padding: 0.25rem 0.7rem;
   border-radius: var(--radius-button);
   border: 1px solid var(--border);
   margin: 0.15rem;
@@ -357,20 +359,20 @@ nav a:hover {
 /* ===== Footer ===== */
 footer {
   background: var(--ink-strong);
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.7);
   text-align: center;
   padding: 2.5rem 2rem;
   font-family: var(--font);
 }
 
 footer p {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .footer-sub {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   margin-top: 0.3rem;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 /* ===== Responsive ===== */
@@ -385,6 +387,6 @@ footer p {
 
   nav a {
     padding: 0.75rem 0.8rem;
-    font-size: 0.78rem;
+    font-size: 0.88rem;
   }
 }
