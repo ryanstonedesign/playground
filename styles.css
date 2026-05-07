@@ -206,32 +206,9 @@ nav a:hover {
 .breed-card {
   background: rgba(255,245,251,1);
   border-radius: var(--radius-card);
-  box-shadow: none;
+  box-shadow: 0 0 0 4px #2B1C28, 8px 8px 0 #2B1C28;
   position: relative;
   overflow: hidden;
-}
-
-/* Gradient stroke (opacity 0 as spec; structure included for completeness) */
-.card::before,
-.fact::before,
-.benefit::before,
-.breed-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(150deg,
-    color-mix(in srgb, #ffffff 85%, transparent) 0%,
-    color-mix(in srgb, #ffffff 25%, transparent) 30%,
-    transparent 55%,
-    color-mix(in srgb, #ffffff 18%, transparent) 80%,
-    color-mix(in srgb, #ffffff 55%, transparent) 100%);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  opacity: 0;
-  pointer-events: none;
 }
 
 /* ===== Why Cards ===== */
