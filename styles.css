@@ -31,7 +31,7 @@ body {
 /* ===== Hero ===== */
 .hero {
   background: linear-gradient(135deg, #7c4a2d 0%, #c0713a 50%, #e8894e 100%);
-  min-height: 100vh;
+  min-height: calc(100vh - 300px);
   display: flex;
   align-items: center;
   justify-content: center;
