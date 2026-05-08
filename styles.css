@@ -384,6 +384,8 @@ footer p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  appearance: none;
+  -webkit-appearance: none;
   background: #fff;
   color: #222;
   font-family: var(--font);
