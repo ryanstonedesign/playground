@@ -55,14 +55,14 @@ body {
 .t1-6 { font-size: 4.22rem; top: 22%; left: 38%; transform: rotate(70deg); }
 .t1-7 { font-size: 4.22rem; top: 16%; left: 46%; transform: rotate(82deg); }
 .t1-8 { font-size: 4.22rem; top: 14%; left: 54%; transform: rotate(95deg); }
-.t2-1 { font-size: 4.22rem; top: 16%; left: 62%; transform: rotate(108deg); }
-.t2-2 { font-size: 4.22rem; top: 22%; left: 69%; transform: rotate(118deg); }
-.t2-3 { font-size: 4.22rem; top: 32%; left: 76%; transform: rotate(128deg); }
-.t2-4 { font-size: 4.22rem; top: 44%; left: 82%; transform: rotate(136deg); }
-.t2-5 { font-size: 4.22rem; top: 58%; left: 87%; transform: rotate(142deg); }
-.t2-6 { font-size: 4.22rem; top: 70%; left: 91%; transform: rotate(148deg); }
-.t2-7 { font-size: 4.22rem; top: 80%; left: 95%; transform: rotate(152deg); }
-.t2-8 { font-size: 4.22rem; top: 90%; left: 98%; transform: rotate(155deg); }
+.t2-1 { font-size: 4.22rem; top: 16%; left: 62%; transform: rotate(100deg); }
+.t2-2 { font-size: 4.22rem; top: 20%; left: 69%; transform: rotate(105deg); }
+.t2-3 { font-size: 4.22rem; top: 26%; left: 76%; transform: rotate(110deg); }
+.t2-4 { font-size: 4.22rem; top: 32%; left: 82%; transform: rotate(115deg); }
+.t2-5 { font-size: 4.22rem; top: 38%; left: 87%; transform: rotate(120deg); }
+.t2-6 { font-size: 4.22rem; top: 42%; left: 91%; transform: rotate(124deg); }
+.t2-7 { font-size: 4.22rem; top: 46%; left: 95%; transform: rotate(128deg); }
+.t2-8 { font-size: 4.22rem; top: 50%; left: 98%; transform: rotate(130deg); }
 
 /* Alternate gait offset perpendicular to travel */
 .t1-1, .t1-3, .t1-5, .t1-7, .t2-1, .t2-3, .t2-5, .t2-7 { margin-left: -0.8%; }
