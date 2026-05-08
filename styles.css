@@ -53,7 +53,7 @@ body::after {
 /* ===== Hero ===== */
 .hero {
   background: linear-gradient(135deg, #0d0204 0%, #4a1020 55%, #C64E56 100%);
-  min-height: calc(100vh - 300px);
+  min-height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -102,23 +102,23 @@ body::after {
 
 .photo-1 {
   top: 10px;
-  left: 0;
+  left: -32px;
   transform: rotate(-6deg);
-  z-index: 1;
+  z-index: 3;
 }
 
 .photo-2 {
   top: 30px;
-  left: 50px;
+  left: 82px;
   transform: rotate(3deg);
   z-index: 2;
 }
 
 .photo-3 {
   top: 50px;
-  left: 20px;
+  left: -12px;
   transform: rotate(-2deg);
-  z-index: 3;
+  z-index: 1;
 }
 
 @media (max-width: 900px) {
