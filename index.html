@@ -148,5 +148,50 @@
     <p>Made with ❤️ for all the good doggos</p>
   </footer>
 
+  <div class="theme-switcher">
+    <div class="theme-popover" id="themePopover" role="listbox" aria-label="Select theme">
+      <div class="theme-option active" data-theme="basic" role="option" aria-selected="true">
+        <span class="theme-option-name">Basic</span>
+        <span class="theme-option-check">✓</span>
+      </div>
+    </div>
+    <button class="theme-fab" id="themeButton" aria-haspopup="listbox" aria-expanded="false">
+      <span id="themeLabel">Basic</span>
+    </button>
+  </div>
+
+  <script>
+    var btn     = document.getElementById('themeButton');
+    var popover = document.getElementById('themePopover');
+    var label   = document.getElementById('themeLabel');
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var open = popover.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+
+    document.addEventListener('click', function() {
+      popover.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+
+    document.querySelectorAll('.theme-option').forEach(function(opt) {
+      opt.addEventListener('click', function(e) {
+        e.stopPropagation();
+        document.querySelectorAll('.theme-option').forEach(function(o) {
+          o.classList.remove('active');
+          o.setAttribute('aria-selected', 'false');
+        });
+        opt.classList.add('active');
+        opt.setAttribute('aria-selected', 'true');
+        document.documentElement.setAttribute('data-theme', opt.dataset.theme);
+        label.textContent = opt.querySelector('.theme-option-name').textContent;
+        popover.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
 </body>
 </html>
