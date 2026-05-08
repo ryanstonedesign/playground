@@ -101,11 +101,11 @@ body::after {
   object-fit: cover;
   border-radius: 32px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.55);
-  border: 3px solid rgba(255,255,255,0.12);
+  border: 2px solid #ffffff;
 }
 
 .photo-1 {
-  top: 10px;
+  top: -22px;
   left: -136px;
   transform: rotate(-6deg);
   z-index: 1;
