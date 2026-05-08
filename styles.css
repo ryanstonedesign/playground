@@ -70,13 +70,23 @@ body::after {
   user-select: none;
 }
 
-.paw-1 { font-size: 28rem; top: -8%;  left: -5%;  transform: rotate(-15deg); }
-.paw-2 { font-size: 10rem; top: 12%;  left: 35%;  transform: rotate(22deg); }
-.paw-3 { font-size: 6rem;  top: 5%;   right: 8%;  transform: rotate(-30deg); }
-.paw-4 { font-size: 14rem; bottom: 2%; left: 18%;  transform: rotate(10deg); }
-.paw-5 { font-size: 8rem;  bottom: 15%;right: 22%; transform: rotate(-18deg); }
-.paw-6 { font-size: 18rem; top: 30%;  right: -4%;  transform: rotate(35deg); }
-.paw-7 { font-size: 5rem;  top: 55%;  left: 42%;  transform: rotate(-8deg); }
+/* Row 1 — top edge, spread left to right */
+.paw-1  { font-size: 7rem;  top: 3%;   left: 2%;   transform: rotate(-20deg); }
+.paw-2  { font-size: 5rem;  top: 6%;   left: 28%;  transform: rotate(15deg); }
+.paw-3  { font-size: 6rem;  top: 2%;   left: 52%;  transform: rotate(-35deg); }
+.paw-4  { font-size: 8rem;  top: 5%;   right: 12%; transform: rotate(25deg); }
+
+/* Row 2 — middle band */
+.paw-5  { font-size: 9rem;  top: 35%;  left: 6%;   transform: rotate(12deg); }
+.paw-6  { font-size: 5rem;  top: 42%;  left: 38%;  transform: rotate(-28deg); }
+.paw-7  { font-size: 7rem;  top: 32%;  right: 25%; transform: rotate(40deg); }
+.paw-8  { font-size: 6rem;  top: 40%;  right: 4%;  transform: rotate(-10deg); }
+
+/* Row 3 — bottom band */
+.paw-9  { font-size: 6rem;  bottom: 8%;  left: 3%;   transform: rotate(30deg); }
+.paw-10 { font-size: 8rem;  bottom: 5%;  left: 30%;  transform: rotate(-22deg); }
+.paw-11 { font-size: 5rem;  bottom: 12%; right: 30%; transform: rotate(18deg); }
+.paw-12 { font-size: 7rem;  bottom: 4%;  right: 6%;  transform: rotate(-32deg); }
 
 .hero-content {
   max-width: 540px;
