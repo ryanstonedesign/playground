@@ -403,6 +403,11 @@ footer p {
   border-color: #bbb;
 }
 
+.theme-fab-icon {
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
 .theme-popover {
   position: absolute;
   bottom: calc(100% + 10px);
