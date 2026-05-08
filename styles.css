@@ -389,8 +389,8 @@ footer p {
   color: #222;
   font-family: var(--font);
   font-weight: 700;
-  font-size: 0.95rem;
-  padding: 0.75rem 16px;
+  font-size: 0.855rem;
+  padding: 0.675rem 14px;
   border-radius: 9999px;
   border: 1px solid #ddd;
   cursor: pointer;
