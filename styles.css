@@ -107,8 +107,8 @@ body::after {
   height: 460px;
   flex-shrink: 0;
   z-index: 1;
-  transform: scale(0.77) translateX(60px);
-  margin-bottom: -24px;
+  transform: scale(0.82) translateX(60px);
+  margin-bottom: -36px;
 }
 
 .photo {
