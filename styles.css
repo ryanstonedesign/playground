@@ -107,7 +107,7 @@ body::after {
   height: 460px;
   flex-shrink: 0;
   z-index: 1;
-  transform: scale(0.87) translateX(60px);
+  transform: scale(0.77) translateX(60px);
   margin-bottom: -24px;
 }
 
