@@ -46,23 +46,23 @@ body {
   user-select: none;
 }
 
-/* Single trail: left edge → swoop down → curve back up through images → exit right */
-.t1-1 { font-size: 4.22rem; top: 20%; left: 1%;  transform: rotate(148deg); }
-.t1-2 { font-size: 4.22rem; top: 29%; left: 6%;  transform: rotate(145deg); }
-.t1-3 { font-size: 4.22rem; top: 39%; left: 12%; transform: rotate(140deg); }
-.t1-4 { font-size: 4.22rem; top: 50%; left: 18%; transform: rotate(135deg); }
-.t1-5 { font-size: 4.22rem; top: 61%; left: 24%; transform: rotate(128deg); }
-.t1-6 { font-size: 4.22rem; top: 71%; left: 31%; transform: rotate(118deg); }
-.t1-7 { font-size: 4.22rem; top: 79%; left: 38%; transform: rotate(105deg); }
-.t1-8 { font-size: 4.22rem; top: 83%; left: 46%; transform: rotate(92deg); }
-.t2-1 { font-size: 4.22rem; top: 82%; left: 50%; transform: rotate(72deg); }
-.t2-2 { font-size: 4.22rem; top: 70%; left: 58%; transform: rotate(60deg); }
-.t2-3 { font-size: 4.22rem; top: 56%; left: 66%; transform: rotate(52deg); }
-.t2-4 { font-size: 4.22rem; top: 42%; left: 74%; transform: rotate(56deg); }
-.t2-5 { font-size: 4.22rem; top: 30%; left: 81%; transform: rotate(65deg); }
-.t2-6 { font-size: 4.22rem; top: 18%; left: 88%; transform: rotate(75deg); }
-.t2-7 { font-size: 4.22rem; top: 8%;  left: 94%; transform: rotate(84deg); }
-.t2-8 { font-size: 4.22rem; top: 0%;  left: 99%; transform: rotate(90deg); }
+/* Trail: bottom-left → arch up through center → back down to bottom-right */
+.t1-1 { font-size: 4.22rem; top: 88%; left: 2%;  transform: rotate(30deg); }
+.t1-2 { font-size: 4.22rem; top: 76%; left: 8%;  transform: rotate(35deg); }
+.t1-3 { font-size: 4.22rem; top: 62%; left: 15%; transform: rotate(40deg); }
+.t1-4 { font-size: 4.22rem; top: 46%; left: 22%; transform: rotate(48deg); }
+.t1-5 { font-size: 4.22rem; top: 32%; left: 30%; transform: rotate(58deg); }
+.t1-6 { font-size: 4.22rem; top: 22%; left: 38%; transform: rotate(70deg); }
+.t1-7 { font-size: 4.22rem; top: 16%; left: 46%; transform: rotate(82deg); }
+.t1-8 { font-size: 4.22rem; top: 14%; left: 54%; transform: rotate(95deg); }
+.t2-1 { font-size: 4.22rem; top: 16%; left: 62%; transform: rotate(108deg); }
+.t2-2 { font-size: 4.22rem; top: 22%; left: 69%; transform: rotate(118deg); }
+.t2-3 { font-size: 4.22rem; top: 32%; left: 76%; transform: rotate(128deg); }
+.t2-4 { font-size: 4.22rem; top: 44%; left: 82%; transform: rotate(136deg); }
+.t2-5 { font-size: 4.22rem; top: 58%; left: 87%; transform: rotate(142deg); }
+.t2-6 { font-size: 4.22rem; top: 70%; left: 91%; transform: rotate(148deg); }
+.t2-7 { font-size: 4.22rem; top: 80%; left: 95%; transform: rotate(152deg); }
+.t2-8 { font-size: 4.22rem; top: 90%; left: 98%; transform: rotate(155deg); }
 
 /* Alternate gait offset perpendicular to travel */
 .t1-1, .t1-3, .t1-5, .t1-7, .t2-1, .t2-3, .t2-5, .t2-7 { margin-left: -0.8%; }
