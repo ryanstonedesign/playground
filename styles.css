@@ -363,4 +363,24 @@ footer p {
   .section, .section-alt {
     padding: 3rem 1.2rem;
   }
+
+  .paw {
+    display: none;
+  }
+
+  .hero {
+    gap: 2rem;
+  }
+
+  .hero-photos {
+    width: 260px;
+    height: 260px;
+    transform: scale(0.78) translateX(0);
+    margin-bottom: -20px;
+  }
+
+  .photo {
+    width: 190px;
+    height: 190px;
+  }
 }
