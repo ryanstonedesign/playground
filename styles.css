@@ -391,8 +391,8 @@ footer p {
   font-family: var(--font);
   font-weight: 700;
   font-size: 0.95rem;
-  padding: 0.75rem 1.8rem;
-  border-radius: var(--radius-button);
+  padding: 0.75rem 12px;
+  border-radius: 9999px;
   border: 1px solid #ddd;
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
