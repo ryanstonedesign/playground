@@ -375,12 +375,20 @@ footer p {
   .hero-photos {
     width: 260px;
     height: 260px;
-    transform: scale(0.78) translateX(40px);
+    transform: scale(0.78) translateX(40px) translateY(-40px);
     margin-bottom: -20px;
   }
 
   .photo {
     width: 190px;
     height: 190px;
+  }
+
+  .photo-1 {
+    left: -128px;
+  }
+
+  .photo-2 {
+    left: 126px;
   }
 }
