@@ -391,7 +391,7 @@ footer p {
   font-family: var(--font);
   font-weight: 700;
   font-size: 0.95rem;
-  padding: 0.75rem 12px;
+  padding: 0.75rem 16px;
   border-radius: 9999px;
   border: 1px solid #ddd;
   cursor: pointer;
@@ -403,6 +403,10 @@ footer p {
 .theme-fab:hover {
   background: #f5f5f5;
   border-color: #bbb;
+}
+
+.theme-fab-prefix {
+  color: #999;
 }
 
 .theme-fab-icon {
