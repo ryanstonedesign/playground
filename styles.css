@@ -65,7 +65,7 @@ body::after {
 
 .paw {
   position: absolute;
-  opacity: 0.05;
+  opacity: 0.15;
   pointer-events: none;
   user-select: none;
 }
