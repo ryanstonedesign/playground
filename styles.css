@@ -56,9 +56,9 @@ body::after {
   min-height: calc(100vh - 300px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 4rem 6rem;
   position: relative;
   overflow: hidden;
 }
@@ -75,9 +75,72 @@ body::after {
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 540px;
   position: relative;
   z-index: 1;
+  text-align: left;
+}
+
+/* Photo pile */
+.hero-photos {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.photo {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.55);
+  border: 3px solid rgba(255,255,255,0.12);
+}
+
+.photo-1 {
+  top: 10px;
+  left: 0;
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+
+.photo-2 {
+  top: 30px;
+  left: 50px;
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+.photo-3 {
+  top: 50px;
+  left: 20px;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-photos {
+    width: 280px;
+    height: 280px;
+  }
+
+  .photo {
+    width: 210px;
+    height: 210px;
+  }
 }
 
 .hero h1 {
