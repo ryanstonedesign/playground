@@ -368,6 +368,142 @@ footer p {
   opacity: 0.55;
 }
 
+/* ===== Pearl Theme ===== */
+[data-theme="pearl"] body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: #212A1E;
+  background:
+    radial-gradient(ellipse 600px 500px at 15% 20%, #ffd8d0 0%, transparent 70%),
+    radial-gradient(ellipse 500px 600px at 75% 15%, #f4d8e4 0%, transparent 70%),
+    radial-gradient(ellipse 550px 450px at 60% 70%, #ffe2d4 0%, transparent 70%),
+    radial-gradient(ellipse 480px 520px at 25% 80%, #f0dde6 0%, transparent 70%),
+    #f5ecec;
+  background-attachment: fixed;
+}
+
+[data-theme="pearl"] .hero {
+  background: transparent;
+  border-bottom: none;
+}
+
+[data-theme="pearl"] .hero h1 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: #212A1E;
+}
+
+[data-theme="pearl"] .tagline {
+  color: #5A6F52;
+}
+
+[data-theme="pearl"] .cta-button {
+  background: linear-gradient(110deg, #94CB80 0%, #BCC289 100%);
+  color: #FFFFFF;
+  font-family: 'Outfit', system-ui, sans-serif;
+  border-radius: 999px;
+  box-shadow: 0 8px 22px #94CB8040, 0 4px 12px #78BA8E30, 0 1px 0 rgba(255,255,255,0.4) inset;
+}
+
+[data-theme="pearl"] .cta-button:hover {
+  background: linear-gradient(110deg, #85bc71 0%, #adb37a 100%);
+}
+
+[data-theme="pearl"] .photo {
+  border-color: #D3D6D1;
+}
+
+[data-theme="pearl"] .section-alt {
+  background: rgba(232, 233, 231, 0.45);
+}
+
+[data-theme="pearl"] .section h2,
+[data-theme="pearl"] .section-alt h2 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: #212A1E;
+}
+
+[data-theme="pearl"] .section h2::after,
+[data-theme="pearl"] .section-alt h2::after {
+  background: #94CB80;
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* Glass card surface */
+[data-theme="pearl"] .card,
+[data-theme="pearl"] .fact,
+[data-theme="pearl"] .benefit,
+[data-theme="pearl"] .breed-card {
+  background: rgba(255,250,248,0.62);
+  border-radius: 28px;
+  backdrop-filter: blur(24px) saturate(1.3);
+  -webkit-backdrop-filter: blur(24px) saturate(1.3);
+  box-shadow: 0 1px 1px rgba(80,40,40,0.05), 0 22px 56px rgba(80,40,40,0.10), 0 48px 110px rgba(80,40,40,0.08);
+  border: none;
+  overflow: hidden;
+}
+
+/* Gradient stroke */
+[data-theme="pearl"] .card::before,
+[data-theme="pearl"] .fact::before,
+[data-theme="pearl"] .benefit::before,
+[data-theme="pearl"] .breed-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(150deg,
+    color-mix(in srgb, #ffe8e4 85%, transparent) 0%,
+    color-mix(in srgb, #ffe8e4 25%, transparent) 30%,
+    transparent 55%,
+    color-mix(in srgb, #ffe8e4 18%, transparent) 80%,
+    color-mix(in srgb, #ffe8e4 55%, transparent) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Noise texture */
+[data-theme="pearl"] .card::after,
+[data-theme="pearl"] .fact::after,
+[data-theme="pearl"] .benefit::after,
+[data-theme="pearl"] .breed-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+[data-theme="pearl"] .card h3,
+[data-theme="pearl"] .benefit h3,
+[data-theme="pearl"] .breed-card h3 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: #212A1E;
+}
+
+[data-theme="pearl"] .card p,
+[data-theme="pearl"] .fact p,
+[data-theme="pearl"] .benefit p,
+[data-theme="pearl"] .breed-card p {
+  color: #5A6F52;
+}
+
+[data-theme="pearl"] .fact-number {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: #94CB80;
+}
+
+[data-theme="pearl"] footer {
+  background: rgba(232, 233, 231, 0.45);
+  color: #5A6F52;
+  font-family: 'Outfit', system-ui, sans-serif;
+  border-top: 1px solid #D3D6D1;
+}
+
 /* ===== Theme Switcher ===== */
 .theme-switcher {
   position: fixed;

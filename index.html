@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="pearl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dogs Are Awesome</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" />
 </head>
 <body>
 
@@ -150,13 +151,17 @@
 
   <div class="theme-switcher">
     <div class="theme-popover" id="themePopover" role="listbox" aria-label="Select theme">
-      <div class="theme-option active" data-theme="basic" role="option" aria-selected="true">
+      <div class="theme-option" data-theme="basic" role="option" aria-selected="false">
         <span class="theme-option-name">Basic</span>
+        <span class="theme-option-check">✓</span>
+      </div>
+      <div class="theme-option active" data-theme="pearl" role="option" aria-selected="true">
+        <span class="theme-option-name">Pearl</span>
         <span class="theme-option-check">✓</span>
       </div>
     </div>
     <button class="theme-fab" id="themeButton" aria-haspopup="listbox" aria-expanded="false">
-      <span class="theme-fab-text"><span class="theme-fab-prefix">Theme:</span> <span id="themeLabel">Basic</span></span>
+      <span class="theme-fab-text"><span class="theme-fab-prefix">Theme:</span> <span id="themeLabel">Pearl</span></span>
       <svg class="theme-fab-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 7 12 2 17 7"/><polyline points="7 17 12 22 17 17"/></svg>
     </button>
   </div>
