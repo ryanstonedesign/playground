@@ -102,23 +102,23 @@ body::after {
 
 .photo-1 {
   top: 10px;
-  left: -32px;
+  left: -96px;
   transform: rotate(-6deg);
-  z-index: 3;
+  z-index: 1;
 }
 
 .photo-2 {
   top: 30px;
-  left: 82px;
+  left: 146px;
   transform: rotate(3deg);
   z-index: 2;
 }
 
 .photo-3 {
   top: 50px;
-  left: -12px;
+  left: -76px;
   transform: rotate(-2deg);
-  z-index: 1;
+  z-index: 3;
 }
 
 @media (max-width: 900px) {
