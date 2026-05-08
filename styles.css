@@ -121,13 +121,23 @@ body {
   }
 
   .hero-photos {
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
+    transform: scale(0.78) translateX(40px) translateY(-40px);
+    margin-bottom: -20px;
   }
 
   .photo {
-    width: 210px;
-    height: 210px;
+    width: 209px;
+    height: 209px;
+  }
+
+  .photo-1 {
+    left: -88px;
+  }
+
+  .photo-2 {
+    left: 86px;
   }
 }
 
