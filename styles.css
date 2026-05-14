@@ -547,7 +547,13 @@ footer p {
 }
 
 [data-theme="neumorph-dark"] .cta-button:hover {
-  background: #5a5fe0;
+  background: var(--color-primary);
+  box-shadow: 5px 5px 9px color-mix(in srgb, rgba(0,0,0,0.48) 84%, transparent), -5px -5px 9px color-mix(in srgb, rgba(66,78,98,0.44) 86%, transparent), inset 1px 1px 0 color-mix(in srgb, rgba(66,78,98,0.44) 72%, transparent);
+}
+
+[data-theme="neumorph-dark"] .cta-button:active {
+  background: var(--color-primary);
+  box-shadow: inset 4px 4px 7px rgba(0,0,0,0.38), inset -4px -4px 7px rgba(66,78,98,0.3);
 }
 
 [data-theme="neumorph-dark"] .section-alt {
