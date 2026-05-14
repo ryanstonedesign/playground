@@ -492,3 +492,176 @@ footer p {
     left: 86px;
   }
 }
+
+/* ===== NeumorphDark Theme ===== */
+[data-theme="neumorph-dark"] {
+  --radius-button: 16px;
+  --radius-card:   32px;
+  --font: 'Space Grotesk', system-ui, sans-serif;
+
+  --color-primary:        #4B50D2;
+  --color-secondary:      #AE74D8;
+  --color-tertiary:       #3CA4DD;
+  --color-surface:        #49495B;
+  --color-surface-muted:  #32323E;
+  --color-border:         #202028;
+  --color-ink-strong:     #E8E8ED;
+  --color-ink-mute:       #9A9BB1;
+  --color-page:           #111722;
+  --color-card-bg:        #161b24;
+}
+
+[data-theme="neumorph-dark"] body {
+  font-family: var(--font);
+  color: var(--color-ink-strong);
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 20%,  #182030 0%, transparent 70%),
+    radial-gradient(ellipse 55% 45% at 85% 15%,  #202a3a 0%, transparent 65%),
+    radial-gradient(ellipse 50% 60% at 10% 80%,  #0d121b 0%, transparent 70%),
+    radial-gradient(ellipse 65% 55% at 90% 85%,  #263146 0%, transparent 65%),
+    #111722;
+  background-attachment: fixed;
+}
+
+[data-theme="neumorph-dark"] .hero {
+  background: transparent;
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="neumorph-dark"] .hero h1 {
+  font-family: var(--font);
+  color: var(--color-ink-strong);
+}
+
+[data-theme="neumorph-dark"] .tagline {
+  color: var(--color-ink-mute);
+}
+
+[data-theme="neumorph-dark"] .cta-button {
+  background: var(--color-primary);
+  color: #ffffff;
+  font-family: var(--font);
+  border-radius: var(--radius-button);
+  box-shadow: 8px 8px 18px rgba(0,0,0,0.42), -7px -7px 16px rgba(66,78,98,0.34), inset 1px 1px 0 rgba(255,255,255,0.16);
+  border: none;
+}
+
+[data-theme="neumorph-dark"] .cta-button:hover {
+  background: #5a5fe0;
+}
+
+[data-theme="neumorph-dark"] .section-alt {
+  background: transparent;
+}
+
+[data-theme="neumorph-dark"] .section h2,
+[data-theme="neumorph-dark"] .section-alt h2 {
+  font-family: var(--font);
+  color: var(--color-ink-strong);
+}
+
+[data-theme="neumorph-dark"] .section h2::after,
+[data-theme="neumorph-dark"] .section-alt h2::after {
+  background: var(--color-border);
+}
+
+[data-theme="neumorph-dark"] .card,
+[data-theme="neumorph-dark"] .fact,
+[data-theme="neumorph-dark"] .benefit,
+[data-theme="neumorph-dark"] .breed-card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-card);
+  border: none;
+  backdrop-filter: blur(0px) saturate(1);
+  -webkit-backdrop-filter: blur(0px) saturate(1);
+  box-shadow: 12px 12px 22px rgba(0,0,0,0.48), -10px -10px 20px rgba(52,62,78,0.36);
+  overflow: hidden;
+}
+
+[data-theme="neumorph-dark"] .card::before,
+[data-theme="neumorph-dark"] .fact::before,
+[data-theme="neumorph-dark"] .benefit::before,
+[data-theme="neumorph-dark"] .breed-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(150deg,
+    color-mix(in srgb, #263146 85%, transparent) 0%,
+    color-mix(in srgb, #263146 25%, transparent) 30%,
+    transparent 55%,
+    color-mix(in srgb, #263146 18%, transparent) 80%,
+    color-mix(in srgb, #263146 55%, transparent) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+}
+
+[data-theme="neumorph-dark"] .card h3,
+[data-theme="neumorph-dark"] .benefit h3,
+[data-theme="neumorph-dark"] .breed-card h3 {
+  font-family: var(--font);
+  color: var(--color-ink-strong);
+}
+
+[data-theme="neumorph-dark"] .card p,
+[data-theme="neumorph-dark"] .fact p,
+[data-theme="neumorph-dark"] .benefit p,
+[data-theme="neumorph-dark"] .breed-card p {
+  color: var(--color-ink-mute);
+}
+
+[data-theme="neumorph-dark"] .fact-number {
+  font-family: var(--font);
+  color: var(--color-primary);
+}
+
+[data-theme="neumorph-dark"] footer {
+  background: var(--color-surface-muted);
+  color: var(--color-ink-mute);
+  border-top-color: var(--color-border);
+}
+
+[data-theme="neumorph-dark"] .photo {
+  border-color: var(--color-border);
+}
+
+/* Theme switcher — NeumorphDark overrides */
+[data-theme="neumorph-dark"] .theme-fab {
+  background: var(--color-surface);
+  color: var(--color-ink-strong);
+  border-color: var(--color-border);
+  font-family: var(--font);
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.38), -6px -6px 12px rgba(66,78,98,0.34);
+}
+
+[data-theme="neumorph-dark"] .theme-fab:hover {
+  background: var(--color-surface-muted);
+}
+
+[data-theme="neumorph-dark"] .theme-fab-prefix {
+  color: var(--color-ink-mute);
+}
+
+[data-theme="neumorph-dark"] .theme-popover {
+  background: var(--color-card-bg);
+  border-color: var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: 12px 12px 22px rgba(0,0,0,0.48), -10px -10px 20px rgba(52,62,78,0.36);
+}
+
+[data-theme="neumorph-dark"] .theme-option {
+  font-family: var(--font);
+  color: var(--color-ink-strong);
+}
+
+[data-theme="neumorph-dark"] .theme-option:hover {
+  background: var(--color-surface-muted);
+}
+
+[data-theme="neumorph-dark"] .theme-option-check {
+  color: var(--color-primary);
+}
